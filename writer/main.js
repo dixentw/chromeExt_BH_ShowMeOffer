@@ -29,6 +29,7 @@ class WriteApp extends React.Component {
                 <TextField
                     floatingLabelText="* 面試心得"
                     multiLine={true}
+                    rows={4}
                 />
                 <br/>
                 <TextField floatingLabelText="* 作者"/>

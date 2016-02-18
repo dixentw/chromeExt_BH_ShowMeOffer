@@ -88,19 +88,19 @@ function showEditPanel() {
 		"<img src=" + DEF_SRC_BUTTON_IMAGE +"/>" +
 		"</button>";
 	$('body').append(template);
-	$('#offerButton').click(function(){
-		console.log("ohohohooh~~~~");
-		$('body').append('<div id="writer"></div>');
-		$('#writer').load(DEF_SRC_WRITER_HTML, function(){
-			console.log("loaded");
-			$.getScript(DEF_SRC_WRITER_SCRIPT);
-		});
+	$('#offerButton').click(clickToWriteHandle);
+}
+
+function clickToWriteHandle(){
+	$('body').append('<div id="writer"></div>');
+	$('#writer').load(DEF_SRC_WRITER_HTML, function(){
+		$.getScript(DEF_SRC_WRITER_SCRIPT);
 	});
 }
 
 
 var bypassCheckCompanyInfo = function(){
-	showEditPanel();
+	showEditButton();
 }
 
 if(self === top) {
