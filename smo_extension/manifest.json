@@ -16,35 +16,21 @@
         "https://www.linkedin.com/*",
         "https://www.glassdoor.com/*",
         "http://www.glassdoor.com/*",
-  			"contextMenus",
+  		"contextMenus",
         "tabs",
         "storage"
   		],
   "background": {
-    "page" : "data/background.html"
+    "page" : "background.html"
   },
   "content_scripts": [{
-        "matches": [
-           "http://www.104.com.tw/*",
-           "http://www.ejob.gov.tw/*",
-           "https://www.ejob.gov.tw/*",
-           "http://www.104temp.com.tw/*",
-           "http://www.1111.com.tw/*",
-           "http://www.yes123.com.tw/*",
-           "http://www.518.com.tw/*",
-           "https://www.518.com.tw/*",
-           "http://www.linkedin.com/*",
-           "https://www.linkedin.com/*",
-           "https://www.glassdoor.com/*",
-           "http://www.glassdoor.com/*"
-
-           ],
+        "matches": ["<all_urls>"],
       "js": [
-              "data/lib/jquery-1.11.0.min.js",
-              "data/lib/utils.js",
-              "data/lib/actionTable.js",
-              "data/featureList.js",
-              "data/content_script.js"
+              "lib/jquery-1.11.0.min.js",
+              "lib/utils.js",
+              "lib/actionTable.js",
+              "featureList.js",
+              "content_script.js"
             ],
      "run_at": "document_idle",
      "all_frames": true
@@ -53,5 +39,6 @@
     "16": "icon_16x16.png",
     "48": "icon_48x48.png",
     "128": "icon_128x128.png"
-  }
+  },
+  "web_accessible_resources": ["*"]
 }
