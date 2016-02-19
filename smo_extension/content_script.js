@@ -92,7 +92,7 @@ function showEditPanel() {
 }
 
 function clickToWriteHandle(){
-	$('body').append('<div id="writer"></div>');
+	$('body').append('<div style="z-index: 2147483647;" id="writer"></div>');
 	$('#writer').load(DEF_SRC_WRITER_HTML, function(){
 		$.getScript(DEF_SRC_WRITER_SCRIPT);
 	});
@@ -100,7 +100,7 @@ function clickToWriteHandle(){
 
 
 var bypassCheckCompanyInfo = function(){
-	showEditButton();
+	showEditPanel();
 }
 
 if(self === top) {

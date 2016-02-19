@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 var config = {
     entry: './writer/main.js',
@@ -15,7 +16,10 @@ var config = {
                 presets:['react','es2015']
             }
         }]
-    }
+    },
+	plugins: [
+    	new webpack.optimize.UglifyJsPlugin({minimize: true})
+  	] 
 };
 
 module.exports = config;
